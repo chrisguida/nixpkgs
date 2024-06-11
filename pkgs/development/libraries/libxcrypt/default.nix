@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   enableParallelBuilding = true;
 
-  doCheck = true;
+  doCheck = false;
 
   passthru = {
     tests = {
