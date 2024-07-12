@@ -1,4 +1,4 @@
-{ fetchNuGet }: [
+{ fetchNuGet, fetchgit }: [
   (fetchNuGet {
     pname = "Dapper";
     version = "2.0.123";
@@ -197,8 +197,13 @@
   (fetchNuGet {
     pname = "NBitcoin";
     version = "7.0.22";
-    sha256 = "1911mwz23qm9qnlfsm2j6qdkj1l43gjym4di8r50zikfnyd654sx";
+    sha256 = "";
+    src = fetchgit {
+      url = "https://github.com/chrisguida/NBitcoin.git";
+      rev = "mutinynet"; # The commit hash or branch name
+    };
   })
+
   (fetchNuGet {
     pname = "NETStandard.Library";
     version = "1.6.1";
